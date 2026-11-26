@@ -1,0 +1,10 @@
+services:
+  flask:
+    build: ./flask-app
+    ports:
+      - "5005:5000"
+    depends_on:
+      - redis
+
+  redis:
+    build: ./redis
